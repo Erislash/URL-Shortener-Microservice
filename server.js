@@ -6,10 +6,31 @@ const path = require('path');
 // Basic Configuration
 const port = process.env.PORT || 3000;
 
+require(path.join(__dirname, 'database.js'));
+
 app.use(cors());
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const routes = {
   index: require(path.join(__dirname, 'routes', 'index')),
